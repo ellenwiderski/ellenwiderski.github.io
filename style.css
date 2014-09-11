@@ -1,0 +1,61 @@
+html,body {
+	background-color: E2AAFF;
+	font-family: 'Raleway', sans-serif;
+	margin-right: auto;
+	margin-left: auto;
+	text-align:center;
+	font-size:10pt;
+	margin: 0px;
+}
+table {
+	width:100%;
+	padding:20;
+	margin-right: auto;
+	margin-left: auto;
+}
+table#classes {
+	border-spacing:50;
+}
+
+table#header {
+	background-color:#521466;
+	padding:15;
+}
+table#contact {
+	width:60%;
+}
+
+figcaption {
+	font-size:12pt;
+}
+
+a {
+	text-decoration: none;
+	color:white;
+}
+
+th#header {
+	width:25%;
+	font-color:white;
+	font-size:14pt;
+}
+th#img {
+	width:5%;
+	text-align:right;
+}
+
+ol {
+	width:25%;
+	font-size:12pt;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1 {
+	font-size:44pt;
+	font-family: 'Dancing Script', cursive;
+}
+
+h2 {
+	font-size:22pt;
+}
