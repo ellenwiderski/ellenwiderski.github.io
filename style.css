@@ -1,0 +1,54 @@
+body {
+	background-color: #E2AAFF;
+}
+
+table#header {
+	background-color:#521466;
+ 	width:100%;
+ 	padding:15px;
+}
+
+th {
+	color:white;
+	font-size:14pts;
+	font-family: 'Raleway', sans-serif;
+}
+
+th#header {
+	width:25%;
+}
+
+h1#pagename {
+	text-align:center;
+	font-family: 'Dancing Script', cursive;
+	font-size: 24pts;
+}
+
+h2 {
+	text-align:center;
+	font-size:18px;
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+ text-decoration: none;
+ color:white;
+}
+
+table {
+	text-align:center; 
+	width:100%;
+	padding:20;
+}
+
+ol {
+	text-align:left;
+	font-size:4;
+	font-family: 'Raleway', sans-serif;
+}
+
+table#funfacts {
+	text-align:center;
+	width:40%;
+	padding:25;
+}
