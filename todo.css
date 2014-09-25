@@ -33,3 +33,7 @@ li:before {
 ul {
 	list-style:none;
 }
+
+body {
+	size:20pt
+}
