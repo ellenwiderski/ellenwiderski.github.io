@@ -1,22 +1,47 @@
 <html>
 	<head>
-		<title>To-Do</title>
-		<link rel="stylesheet" type="text/css" href="todo.css">
-		<link href='http://fonts.googleapis.com/css?family=Raleway|Dancing+Script' rel='stylesheet' type='text/css'>
+		<title>To-Do List</title>
+		<style>
+			section {
+				width:60%;
+				margin-left:auto;
+				margin-right:auto;
+				margin-bottom:50px;
+			}
+			footer {
+				clear:both;
+				position:fixed;
+				left:0px;
+				bottom:0px;
+				width:100%;
+				text-align:center;
+				padding:20px;
+			}
+			h1 {
+				text-align:center;
+			}
+			li {
+				list-style-type: none;
+				text-align: left;
+				padding:10px;
+			}
+			input#new {
+				width:40%;
+			}
+			
+		</style>
 	</head>
 	<body>
-		<h1>To-Do</h1>
-		<ul class="todo">
-			<li class="high">Write Detective Fiction Paper</li>
-			<li class="high">Prove that the prime period of a prime number p for the doubling map divides p-1</li>
-			<li class="medium">Sleep</li>
-			<li class="medium">Alphabetize movies</li>
-			<li class="medium">Define class methods for AVL trees</li>
-			<li class="low">Eat Soup</li>
-			<li class="low">Play cribbage</li>
-			<li class="low">High five</li>
-			<li class="complete">Sharpen Pencils</li>
-			<li class="complete">Define class methods for Heaps</li>
-		</ul>
+		<script src="todo.js"></script>
+		<h1> To-Do List </h1>
+		<section>
+			<ul id="list">
+			</ul>
+		</section>
+		<footer>
+			<span>New Task:</span>
+			<input id="new" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('add').click()">
+			<button id="add" type="button" onclick="addnew();">+</button>
+		</footer>
 	</body>
 </html>
