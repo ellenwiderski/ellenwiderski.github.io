@@ -1,86 +1,121 @@
 <html>
-	<head>
-		<title>To-Do List</title>
-		<style>
-			section {
-				width:60%;
-				margin-left:auto;
-				margin-right:auto;
-				margin-bottom:50px;
-			}
-			footer {
-				clear:both;
-				position:fixed;
-				left:0px;
-				bottom:0px;
-				width:100%;
-				text-align:center;
-				padding:20px;
-			}
-			h1 {
-				text-align:center;
-				font-size:40px;
-			}
-			li {
-				list-style-type: none;
-				text-align: left;
-				padding:10px;
-				font-size:20px;
-			}
-			input[type="checkbox"] {
-				-webkit-transform: scale(1.3);
-				margin-right:20px;
-			}
+    <head>
+        <title>To-Do</title>
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                width:100%;
+                background-color:#F2F2F2;
+                font-family:'Shadows Into Light',cursive;
+                font-size: 16pt;
+            }
+            h1 {
+                font-family:'Poiret One',cursive;
+                text-align: center;
+                height:10%;
+                margin:0px;
+            }
+            p {
+                display:inline;
+                padding-left: 20px;
+            }
+            button {
+                margin:10px;
+            }
+            li {
+                list-style-type: none;
+                padding-left: 50px;
+            }
+            .done {
+                text-decoration:line-through;
+            }
 
-			span {
-				font-size:28px;
-			}
+            .high {
+                color:#B5003C;
+            }
+            
+            .medium {
+                color:#DE7E2A;
+            }
+            
+            .low {
+                color:#00AD74;
+            }
+            aside {
+                width:60%;
+                margin-left:auto;
+                margin-right:auto;
+                height:70%;
+                overflow:scroll;
+            }
+            footer {
+                font-family:'Poiret One',cursive;
+                clear:both;
+                position:fixed;
+                left:0px;
+                bottom:0px;
+                width:100%;
+                text-align:center;
+                background-color:#A8D2FF;
+                height:20%;
+                border-top:solid;
+                border-radius:10px;
+                border-color:#525252;
+                overflow:scroll;
+            }
+            section {
+                padding:20px;
+            }
+            ul {
+            }
+        </style>
+    </head>
+    <body>
+        <h1>To-Do: </h1>
+        <script type="text/javascript" src="todo.js"></script>
+        <aside>
+        <ul id = "taskList"></ul>
+        </aside>
 
-			input#new {
-				width:40%;
-				font-size:28px;
-			}
-			button {
-				height:35px;
-				width:35px;
-				position:relative;
-				bottom:5px;
-				margin-left:10px;
-				font-size: 12pt;
-			}
-			
-			.done {
-				text-decoration:line-through;
-			}
-			.notdone {
-				text-decoration:none;
-			}
-			
-			.high {
-			
-			}
-			
-			.medium {
-			
-			}
-			
-			.low {
-			
-			}
-			
-		</style>
-	</head>
-	<body>
-		<script src="todo.js"></script>
-		<h1> To-Do List </h1>
-		<section>
-			<ul id="list">
-			</ul>
-		</section>
-		<footer>
-			<span>New Task:</span>
-			<input id="new" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('add').click();">
-			<button id="add" type="button" onclick="addnew();">+</button>
-		</footer>
-	</body>
+        <footer>
+            <section> <p>New Project: </p>
+            <input id="inputProject" type="text">
+            <button id="projBtn">  +  </button>
+            </section>
+
+            <section id = "newtask"> <p>New Task: </p>
+                <input id="inputTask" type="text">
+                <p> Project: </p>
+                <select id = 'projSelect'></select>
+                
+                <p> Priority: </p>
+                <select id='priority'>
+                	<option value="high">High</option>
+                	<option value="medium">Medium</option>
+                	<option value="low">Low</option>
+                </select>
+
+                <p> Due Date: </p>
+                <input type="date" id="duedate">
+                <button id="taskBtn">  +  </button>
+            </section>
+        </footer>
+
+        <script type="text/javascript">
+            var model = new ListModel([],{})
+            var view = new ListView(model, {
+                    'list' : document.getElementById('taskList'), 
+                    'taskButton' : document.getElementById('taskBtn'), 
+                    'projButton' : document.getElementById('projBtn'),
+                    'projSelect' : document.getElementById('projSelect'),
+                    'inputProj' : document.getElementById('inputProject'),
+                    'inputTask' : document.getElementById('inputTask'),
+                    'priority' : document.getElementById('priority'),
+                    'duedate' : document.getElementById('duedate'),
+                    'newtask' : document.getElementById('newtask'),
+                    'window' : window
+                })
+            var controller = new ListController(model, view);
+        </script>
+    </body>
 </html>
