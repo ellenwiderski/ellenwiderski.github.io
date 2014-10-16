@@ -85,7 +85,6 @@ ListModel.prototype = {
 
     saveList : function() {
         var res = {};
-
         for (var proj in this._projs) {
             if (this._projs.hasOwnProperty(proj)){
                 var newtasks = [];
@@ -95,9 +94,7 @@ ListModel.prototype = {
                         newtasks.push(new Task(task.name,task.priority,task.duedate,task.project.name,task.done));
                     }
                 }
-                if (newtasks.length !== 0) {
-                    res[this._projs[proj].name] = new Project(this._projs[proj].name,newtasks,false);
-                }
+                res[this._projs[proj].name] = new Project(this._projs[proj].name,newtasks,false);
             }
         }
         localStorage.setItem("todoDatabase",JSON.stringify(res));
