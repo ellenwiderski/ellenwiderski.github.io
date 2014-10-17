@@ -22,7 +22,7 @@
 	    function (response) {
 	      if (response && !response.error) {
 	      	var p = document.createElement('p');
-	      	body.appendChild(p);
+	      	document.appendChild(p);
 	      	for (var i in response['data']) {
 	      		if (response['data'][i].type === 'status') {
 			      	p.appendChild(document.createTextNode(response['data'][i]));
