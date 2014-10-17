@@ -66,8 +66,8 @@
   FB.api(
     "/me/home",
     function (response) {
+      console.log(response);
       if (response && !response.error) {
-        console.log(response);
       }
     }
 );
