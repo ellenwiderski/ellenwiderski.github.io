@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
+<title></title>
 <meta charset="UTF-8">
 </head>
 <body>
@@ -84,6 +84,14 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  FB.api(
+    "/me/home",
+    function (response) {
+      if (response && !response.error) {
+        console.log(response);
+      }
+    }
+);
 </script>
 
 <!--
