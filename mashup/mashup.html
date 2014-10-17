@@ -26,7 +26,7 @@
 	      	for (var i in response['data']) {
 	      		if (response['data'][i].type === 'status') {
 	      			var li = document.createElement('li');
-			      	li.appendChild(document.createTextNode(response['data'][i]));
+			      	li.appendChild(document.createTextNode(response['data'][i]['message']));
 			      	ul.appendChild(li);
 				}
 		      }
