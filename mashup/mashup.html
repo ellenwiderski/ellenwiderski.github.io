@@ -4,7 +4,7 @@
 <title></title>
 <meta charset="UTF-8">
 </head>
-<body>
+<body id='body'>
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -21,13 +21,17 @@
 	    "/me/home",
 	    function (response) {
 	      if (response && !response.error) {
-	      	var p = document.createElement('p');
+	      	var ul = document.createElement('ul');
+	      	var body = document.getElementById('body');
 	      	document.appendChild(p);
 	      	for (var i in response['data']) {
 	      		if (response['data'][i].type === 'status') {
-			      	p.appendChild(document.createTextNode(response['data'][i]));
+	      			var li = document.createElement('li');
+			      	li.appendChild(document.createTextNode(response['data'][i]));
 				}
+				ul.appendChild(li);
 		      }
+		    body.appendChild(ul);
 	      }
 	    }
 	  );
