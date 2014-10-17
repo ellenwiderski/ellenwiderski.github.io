@@ -27,8 +27,8 @@
 	      		if (response['data'][i].type === 'status') {
 	      			var li = document.createElement('li');
 			      	li.appendChild(document.createTextNode(response['data'][i]));
+			      	ul.appendChild(li);
 				}
-				ul.appendChild(li);
 		      }
 		    body.appendChild(ul);
 	      }
