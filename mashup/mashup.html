@@ -23,7 +23,6 @@
 	      if (response && !response.error) {
 	      	var ul = document.createElement('ul');
 	      	var body = document.getElementById('body');
-	      	document.appendChild(p);
 	      	for (var i in response['data']) {
 	      		if (response['data'][i].type === 'status') {
 	      			var li = document.createElement('li');
