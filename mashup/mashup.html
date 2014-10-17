@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
 </head>
 <body>
@@ -36,6 +36,15 @@
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
+
+   FB.api(
+    "/me/home",
+    function (response) {
+      if (response && !response.error) {
+        console.log(response);
+      }
+    }
+);
   }
 
   window.fbAsyncInit = function() {
@@ -84,14 +93,6 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
-  FB.api(
-    "/me/home",
-    function (response) {
-      if (response && !response.error) {
-        console.log(response);
-      }
-    }
-);
 </script>
 
 <!--
