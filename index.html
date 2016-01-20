@@ -1,28 +1,141 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href='http://fonts.googleapis.com/css?family=Raleway|Dancing+Script' rel='stylesheet' type='text/css'>
-		<title>Ellen Widerski</title>
-	</head>
-	<body>
-		<script src="homepage.js"></script>
-		<nav>
-			<ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="music.html">MUSIC</a></li>
-				<li><a href="classes.html">MY CLASSES</a></li>
-				<li><a href="contactme.html">CONTACT ME</a></li>
-			</ul>
-		</nav>
-		<header>
-			Ellen Widerski
-		</header>
-		<section id='funfacts'>
-			<button onclick="funfact();">Fun Facts!</button>
-		</section>
-		<aside>Hello! My name is Ellen. I'm a Math & CS major at Luther College.
-			<img src="goat.jpg" />
-		</aside>
-		<footer>&copy Copyright 2014, Ellen Widerski</footer>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <title>Ellen Widerski</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Lato:700,400,300' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" type='text/css' href='styles.css'/>
+    </head>
+    
+    <body>
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+    <script type="text/javascript" src="smoothscroll.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+        
+        <!--Hidden Menu-->
+        <div id='myNavmenu' class='navmenu navmenu-default navmenu-fixed-left offcanvas' role='navigation'>
+            <a class='smoothScroll navmenu-brand' href='#ellenwiderski'>Ellen Widerski</a>
+            <ul class='nav navmenu-nav'>
+                <li>
+                    <a href='#aboutme' class='smoothScroll'>About Me</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Menu Button-->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <button id='menubutton' type='button' class='navbar-toggle visible-xs visible-sm visible-md visible-lg' data-toggle='offcanvas' data-target='#myNavmenu'>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class='container'>
+
+            <!--Title-->
+            <div id='ellenwiderski' class='row'>
+
+                <div id='banner' class='container'>
+                    <img id='bannerimg' src='12391828_2088106024661309_4231632858055680345_n.jpg'/>
+                <h1 id='title'>Ellen Widerski</h1>
+                </div>
+            </div>
+        
+
+            <!--About Me-->
+            <div id='aboutme' class='row'>
+                <div class='container' id='aboutmecontainer'>
+
+                    <!--Title-->
+                    <div class='row'>
+                        <h1 class='sectiontitle text-center'>
+                            About Me
+                        </h1>
+                    </div>
+
+                    <div class='vertspace-xs visible-xs'></div>
+
+                    <!--Content-->
+                    <div id='content' class='row'>
+                        <div class='container vertcenter'>
+
+                            <!--Bio-->
+                            <div id='aboutmecontent' class='col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1'>
+                                <p class='text-justified text-center'>
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus urna dolor, lobortis quis tortor sed, maximus commodo sapien. Sed egestas tempus lectus, et maximus metus accumsan et. Integer eu felis vitae neque tempus malesuada. Donec risus tellus, lobortis sit amet accumsan vitae, tristique eget est. Donec eleifend ipsum eget nibh ultrices vehicula. Mauris eu libero sed nibh feugiat posuere sed at ante.-->
+                                    My name is Ellen Widerski and I'm a senior at <a href='http://www.luther.edu'>Luther College</a>. This spring I will be graduating with a B.A. in Math and Computer Science. While at Luther, I performed in many music ensembles, studied environmental policy in Germany and Norway, contributed to <a href='https://en.wikipedia.org/wiki/Abelian_sandpile_model'>Math</a> and <a href='https://github.com/LCRRS/Palmer'>computer science</a> research, student taught for a high school math class, and interned in IT for Noodles & Company and Envision IT.  This July, I will be moving to Mountain View, CA to work as a Software Engineering Resident for Google.
+                                </p>
+                            </div>
+                            
+                            <!--My face-->
+                            <div class='col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-0 col-md-5 col-md-offset-0col-lg-5 col-lg-offset-0'>
+
+                                <img id='aboutmeimg' class='img-responsive img-circle center-block' src='ellen1_edit.jpg'/>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div class='vertspace-xs visible-xs'></div>
+
+                    <!--Links-->
+                    <div id='links' class='row'>
+                        <div class='container'>
+
+                            <!--Linked In-->
+                            <div class='col-xs-2 col-xs-offset-3 col-sm-2 col-md-2 col-lg-2 text-center'>
+                                <a href='http://www.linkedin.com/in/ellen-widerski-142726a5'>
+                                    <span class='fa-stack fa-4x'>
+                                        <i class='fa fa-circle fa-stack-2x'></i>
+                                        <i class="fa fa-linkedin-square fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </div>
+                            <!--Github-->
+                            <div class='col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center'>
+                                <a href='https://github.com/ellenwiderski'>
+                                    <span class='fa-stack fa-4x'>
+                                        <i class='fa fa-circle fa-stack-2x'></i>
+                                        <i class="fa fa-github-square fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <!--Email-->
+                            <div class='col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center'>
+                                <a href='mailto:ellen.widerski@gmail.com'>
+                                    <span class='fa-stack fa-4x'>
+                                        <i class='fa fa-circle fa-stack-2x'></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Resume-->
+            <div id='resume' class='row'>
+                <div class='container'>
+                    <h1 class='sectiontitle text-center'>Résumé
+                        <a href='/EllenWiderski.pdf' download>
+                            <span id='resumedownload' class='fa-stack'>
+                                <i class='fa fa-circle fa-stack-2x'></i>
+                                <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
