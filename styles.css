@@ -37,7 +37,14 @@ body {
     height:100%;
     background-color:#fff8f3;
     font-family: 'Lato', sans-serif;
+    font-weight:300;
     cursor:default;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-left: 200px;
+  }
 }
 
 a {
@@ -84,13 +91,6 @@ a:focus {
     color:#455513;
 }
 
-#resume {
-    background-color:#8e4a84;
-    color:white;
-    opacity:0.9;
-    font-weight:400;
-}
-
 #aboutme {
     height: 100%;
     height: 100vh;
@@ -108,14 +108,7 @@ a:focus {
 
 .sectiontitle {
     font-size:5vmax;
-    padding-bottom: 2vmax;
-}
-
-#aboutmecontainer {
-    display:table-cell;
-    vertical-align: middle;
-    max-height:100%;
-    max-height:100vh;
+    padding-bottom: 1vmax;
 }
 
 .vertspace-xs {
@@ -134,11 +127,13 @@ a:focus {
 
 #menubutton {
     visibility: visible;
-    background-color:white;
+/*    background-color:white;*/
+    background:none;
     opacity:0.8;
     position:absolute;
-    top:0;
+    top:5px;
     right:0;
+    border:0;
 }
 
 .fa-bars {
@@ -155,8 +150,62 @@ button {
 
 #myNavmenu {
     background-color:#fff8f3;
+    width:200px;
 }
 
 .text-justified {
     text-align: justify;
+}
+
+.white-bar {
+    height:3px !important;
+    width:25px !important;
+    background-color:white !important;
+}
+
+#luther {
+    width:150px;
+}
+
+.light {
+    font-weight:300;
+}
+
+#edcontent {
+    padding-left:0.5vw;
+}
+
+#partyanimal {
+    width:20vmax;
+    margin:10px;
+}
+
+#seniorproj {
+    height:100%;
+    height:100vh;
+}
+
+div>ul>li>.indented {
+    margin-left:10px;
+    padding-top:0px;
+    padding-bottom:2px;
+}
+#education {
+    background-color:#8e4a84;
+    color:white;
+    opacity:0.9;
+    font-weight:400;
+    height:100%;
+    height:100vh;
+}
+
+.vertcentercontainer {
+    display:table-cell;
+    vertical-align: middle;
+    max-height:100%;
+    max-height:100vh;
+}
+
+.nobullet {
+    list-style: none;
 }
